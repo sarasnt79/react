@@ -82,9 +82,15 @@ if(this.state.isStart== false){
           {`${ h >9 ? h : "0" +h}:${ m >9 ? m : "0" +m}:${ s >9 ? s : "0" +s}`}
         </h2>
         <div className='box'>     
-           <button className='startbt' onClick={this.StartBt}>Start</button>
-        <button className='stopbt' onClick={this.StopBt}>Stop</button>
-        <button className='rst' onClick={this.rstbtn}>Reset</button>
+           <button className='startbt btn' onClick={this.StartBt}>Start</button>
+        <button className='stopbt btn' onClick={this.StopBt}>Stop</button>
+        <button className='rst btn' onClick={this.rstbtn}>Reset</button>
+        <button className='rst btn' onClick={this.props.handelSetIsLight} style ={{
+          background : this.props.islight ?"black" : "white" ,
+          color :this.props.islight ?"white"  : "black"
+        }}>
+          {this.props.islight ?"DARK"  : "LIGHT"}
+        </button>
         </div>
   
         </>
