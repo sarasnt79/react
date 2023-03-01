@@ -1,17 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const tick=()=>{
+import App from './App';
+import Timer from './Timer';
+import Head1 from './Head1';
+import './style.css'
 
-  const elem=(
 
-    <div>
-      <h1>hello my friens</h1>
-      <h2> it is {new Date().toLocaleTimeString()}
-      </h2>
-    </div>
 
-  )
-  ReactDOM.render(elem , document.getElementById('root'))
-}
-setInterval(() => {tick()},1000)
+ReactDOM.render(<App/> , document.getElementById('root'))
+// const tick=()=>{
+
+
+// }
+// setInterval(() => {tick()},1000)
